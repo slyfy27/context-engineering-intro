@@ -1,26 +1,44 @@
 ## FEATURE:
 
-- Pydantic AI agent that has another Pydantic AI agent as a tool.
-- Research Agent for the primary agent and then an email draft Agent for the subagent.
-- CLI to interact with the agent.
-- Gmail for the email draft agent, Brave API for the research agent.
+- Rust web API service using Axum framework for a task management system.
+- RESTful endpoints for CRUD operations on tasks and user management.
+- JWT-based authentication and authorization middleware.
+- PostgreSQL database integration using SQLx with async operations.
+- Comprehensive error handling with custom error types and proper HTTP status codes.
+- Structured logging using tracing and configuration management with environment variables.
+- CLI interface for database migrations and admin operations using clap.
 
 ## EXAMPLES:
 
 In the `examples/` folder, there is a README for you to read to understand what the example is all about and also how to structure your own README when you create documentation for the above feature.
 
-- `examples/cli.py` - use this as a template to create the CLI
-- `examples/agent/` - read through all of the files here to understand best practices for creating Pydantic AI agents that support different providers and LLMs, handling agent dependencies, and adding tools to the agent.
+- `examples/handlers/` - use these as templates for creating clean REST API handlers
+- `examples/models/` - data models with proper serialization and validation patterns
+- `examples/services/` - business logic layer with proper error handling
+- `examples/database/` - database integration patterns using SQLx and migrations
+- `examples/middleware/` - authentication and logging middleware examples
+- `examples/errors/` - custom error types and error handling patterns
+- `examples/utils/` - helper functions and utilities for common operations
 
 Don't copy any of these examples directly, it is for a different project entirely. But use this as inspiration and for best practices.
 
 ## DOCUMENTATION:
 
-Pydantic AI documentation: https://ai.pydantic.dev/
+Axum documentation: https://docs.rs/axum/
+SQLx documentation: https://docs.rs/sqlx/
+Tokio documentation: https://docs.rs/tokio/
+Serde documentation: https://docs.rs/serde/
+Tracing documentation: https://docs.rs/tracing/
+JWT documentation: https://docs.rs/jsonwebtoken/
 
 ## OTHER CONSIDERATIONS:
 
-- Include a .env.example, README with instructions for setup including how to configure Gmail and Brave.
-- Include the project structure in the README.
-- Virtual environment has already been set up with the necessary dependencies.
-- Use python_dotenv and load_env() for environment variables
+- Include a .env.example file for database URLs and JWT secrets, use dotenv for environment variables
+- Include a comprehensive README with setup instructions including database setup and migration commands
+- Add proper error handling for database connection failures and validation errors
+- Implement request/response logging middleware for debugging and monitoring
+- Ensure proper async/await usage throughout the application with tokio runtime
+- Include database migrations using SQLx migrate functionality
+- Add comprehensive unit and integration tests for all endpoints
+- Follow Rust security best practices for password hashing and JWT handling
+- Include Docker configuration for easy deployment and development setup
