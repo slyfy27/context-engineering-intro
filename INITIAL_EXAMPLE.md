@@ -3,7 +3,7 @@
 - Rust web API service using Axum framework for a task management system.
 - RESTful endpoints for CRUD operations on tasks and user management.
 - JWT-based authentication and authorization middleware.
-- PostgreSQL database integration using SQLx with async operations.
+- MySQL database integration using SQLx with async operations.
 - Comprehensive error handling with custom error types and proper HTTP status codes.
 - Structured logging using tracing and configuration management with environment variables.
 - CLI interface for database migrations and admin operations using clap.
@@ -33,8 +33,8 @@ JWT documentation: https://docs.rs/jsonwebtoken/
 
 ## OTHER CONSIDERATIONS:
 
-- Include a .env.example file for database URLs and JWT secrets, use dotenv for environment variables
-- Include a comprehensive README with setup instructions including database setup and migration commands
+- Include a .env.example file for MySQL database URLs and JWT secrets, use dotenv for environment variables
+- Include a comprehensive README with setup instructions including MySQL database setup and migration commands
 - Add proper error handling for database connection failures and validation errors
 - Implement request/response logging middleware for debugging and monitoring
 - Ensure proper async/await usage throughout the application with tokio runtime

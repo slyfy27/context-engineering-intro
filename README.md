@@ -167,7 +167,7 @@ The AI coding assistant will:
 
 **FEATURE**: Be specific and comprehensive
 - ❌ "Build a web scraper"
-- ✅ "Build an async web scraper using BeautifulSoup that extracts product data from e-commerce sites, handles rate limiting, and stores results in PostgreSQL"
+- ✅ "Build an async web scraper using BeautifulSoup that extracts product data from e-commerce sites, handles rate limiting, and stores results in MySQL"
 
 **EXAMPLES**: Leverage the examples/ folder
 - Place relevant code patterns in `examples/`

@@ -43,10 +43,11 @@ examples/
 - Handle cancellation and timeouts properly
 
 ### 3. Database Integration
-- Use SQLx for compile-time checked queries
-- Implement proper connection pooling
-- Handle database errors gracefully
+- Use SQLx for compile-time checked queries with MySQL
+- Implement proper connection pooling with MySqlPoolOptions
+- Handle database errors gracefully with custom error types
 - Use transactions for multi-step operations
+- Leverage MySQL-specific features like auto_increment and UPSERT
 
 ### 4. HTTP API Design
 - Use Axum extractors for request parsing
@@ -95,7 +96,7 @@ pub async fn create_task(
 ### Service Layer Pattern
 ```rust
 pub struct TaskService {
-    db: Pool<Postgres>,
+    db: Pool<MySql>,
 }
 
 impl TaskService {
